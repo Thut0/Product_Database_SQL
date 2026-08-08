@@ -296,40 +296,151 @@ WHERE Price < 500 OR Price > 5000
 
 --51. Update the price of the Wireless Mouse to 400.00.
 
+UPDATE Products
+SET Price = 400.00
+WHERE ProductName = 'Wireless Mouse'
+
+Select *
+FROM ProductDB.dbo.Products
+WHERE ProductName = 'Wireless Mouse'
+
 --52. Update the stock quantity of the Laptop to 10.
+
+UPDATE Products
+SET StockQuantity = 10
+WHERE ProductName = 'Laptop'
 
 --53. Change the status of the Webcam from Inactive to Active.
 
+UPDATE Products
+SET Status = 'Active'
+WHERE ProductName = 'Webcam'
+
 --54. Update the price of the Office Chair to 3000.00.
+
+UPDATE Products
+SET Price = 3000.00
+WHERE ProductName = 'Office Chair'
+
 
 --55. Update the supplier of the Laptop Bag to TechWorld.
 
+UPDATE Products
+SET Supplier = 'TechWorld'
+WHERE ProductName = 'Laptop Bag'
+
 --56. Increase the price of the Keyboard to 650.00.
+
+UPDATE Products
+SET Price = 650.00
+WHERE ProductName = 'Keyboard'
 
 --57. Change the stock quantity of the Printer to 15.
 
+UPDATE Products
+SET StockQuantity = 15
+WHERE ProductName = 'Printer'
+
 --58. Change the status of the Filing Cabinet to Active.
+
+UPDATE Products
+SET Status = 'Active'
+WHERE ProductName = 'Filing Cabinet'
 
 --59. Update both the price and stock quantity of the Monitor to 4500.00 and 25.
 
+UPDATE Products
+SET Price = 4500.00 , StockQuantity = 25
+WHERE ProductName = 'Monitor'
+
 --60. Update the supplier and price of the Projector to VisionTech and 7500.00.
+
+UPDATE Products
+SET Supplier = 'VisionTech' , Price = 7500.00
+WHERE ProductName = 'Projector'
 
 --61. Delete the product with ProductID = 109.
 
+DELETE FROM Products
+WHERE ProductID = 109
+
 --62. Delete the Webcam product.
+
+DELETE FROM Products
+WHERE ProductName = 'Webcam'
+
+SELECT *
+FROM Products
+WHERE ProductName = 'Webcam'
 
 --63. Delete the product supplied by RetailTech.
 
+DELETE FROM Products
+WHERE Supplier = 'RetailTech'
+
+SELECT *
+FROM Products
+WHERE Supplier = 'RetailTech'
+
 --64. Delete the product with ProductID = 135.
+
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE ProductID = 135
+
+DELETE FROM Products
+WHERE ProductID = 135
 
 --65. Delete the Gaming Monitor.
 
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE ProductName = 'Gaming Monitor'
+
+DELETE FROM Products
+WHERE ProductName = 'Gaming Monitor'
+
 --66. Delete the product where ProductName = 'Printer Paper'.
+
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE ProductName = 'Printer Paper'
+
+DELETE FROM Products
+WHERE ProductName = 'Printer Paper'
 
 --67. Delete products where the status is Inactive.
 
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE Status = 'Inactive'
+
+DELETE FROM Products
+WHERE Status = 'Inactive'
+
 --68. Delete products where the stock quantity is less than 10.
+
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE StockQuantity < 10
+
+DELETE FROM Products
+WHERE StockQuantity < 10
 
 --69. Delete the product where the price is equal to 85.00.
 
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE Price = 85.00
+
+DELETE FROM Products
+WHERE Price = 85.00
+
 --70. Delete the product where ProductID = 140.
+
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE ProductID = 140
+
+DELETE FROM Products
+WHERE ProductID = 140
