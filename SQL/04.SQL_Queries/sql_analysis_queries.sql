@@ -56,23 +56,63 @@ WHERE Category IN ('Furniture')
 
 --11. Display products where the category is Accessories.
 
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE Category IN ('Accessories')
+
 --12. Display products supplied by TechWorld.
+
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE Supplier IN ('TechWorld')
 
 --13. Display products supplied by OfficePro.
 
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE Supplier IN ('OfficePro')
+
 --14. Display products with a status of Active.
+
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE Status IN ('Active')
 
 --15. Display products with a status of Inactive.
 
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE Status IN ('Inactive')
+
 --16. Display the product where ProductName is Laptop.
+
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE ProductName IN ('Laptop')
 
 --17. Display products with a price greater than 1,000.
 
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE Price > 1000
+
 --18. Display products with a price greater than 5,000.
+
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE Price > 5000
 
 --19. Display products with a stock quantity greater than 50.
 
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE StockQuantity > 50
+
 --20. Display products with a stock quantity greater than 100.
+
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE StockQuantity > 100
 
 --21. Display Electronics products with a price greater than 5,000.
 
