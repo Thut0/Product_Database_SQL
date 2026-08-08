@@ -116,63 +116,183 @@ WHERE StockQuantity > 100
 
 --21. Display Electronics products with a price greater than 5,000.
 
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE Category = 'Electronics' AND Price > 5000
+
 --22. Display Accessories products with a price greater than 500.
+
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE Category = 'Accessories' AND Price > 500
 
 --23. Display products supplied by TechWorld with a price greater than 1,000.
 
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE Supplier = 'TechWorld' AND Price > 1000
+
 --24. Display products with a price less than 500.
+
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE Price < 500
 
 --25. Display products with a price less than 1,000.
 
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE Price < 1000
+
 --26. Display products with a stock quantity less than 20.
+
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE StockQuantity < 20
 
 --27. Display products with a stock quantity less than 10.
 
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE StockQuantity < 10
+
 --28. Display Electronics products with a stock quantity less than 20.
+
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE StockQuantity < 20 AND Category = 'Electronics'
 
 --29. Display Accessories products with a price less than 500.
 
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE StockQuantity < 500 AND Category = 'Accessories'
+
 --30. Display Active products with a stock quantity less than 20.
+
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE StockQuantity < 20 AND Status = 'Active'
 
 --31. Display products with a price greater than or equal to 1,000.
 
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE Price >= 1000
+
 --32. Display products with a stock quantity greater than or equal to 50.
+
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE StockQuantity >= 50
 
 --33. Display products with a price greater than or equal to 5,000.
 
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE Price >= 5000
+
 --34. Display Electronics products with a price greater than or equal to 4,000.
+
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE Price >= 4000 AND Category = 'Electronics'
 
 --35. Display products with a price less than or equal to 500.
 
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE Price <= 500
+
 --36. Display products with a stock quantity less than or equal to 10.
+
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE StockQuantity <= 10
 
 --37. Display products with a price less than or equal to 1,000.
 
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE Price <= 1000
+
 --38. Display Accessories products with a price less than or equal to 500.
+
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE Price >= 500 AND Category = 'Accessories'
 
 --39. Display all products that are not in the Electronics category.
 
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE Category <> 'Electronics'
+
 --40. Display all products that are not supplied by TechWorld.
+
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE Supplier <> 'TechWorld'
 
 --41. Display all products whose status is not Inactive.
 
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE Status != 'Inactive'
+
 --42. Display all products whose price is not equal to 500.
+
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE Price != 500
 
 --43. Display all products whose stock quantity is not equal to 20.
 
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE StockQuantity != 20
+
 --44. Display products that are Electronics AND have a price greater than 5,000.
+
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE Category = 'Electronics' AND Price > 5000
 
 --45. Display products that are Accessories AND have a stock quantity less than 30.
 
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE Category = 'Accessories' AND StockQuantity < 30
+
 --46. Display products that are Active AND have a price greater than 2,000.
+
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE Status = 'Active' AND Price > 2000
 
 --47. Display products supplied by TechWorld AND have a price less than 2,000.
 
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE Supplier = 'TechWorld' AND Price < 2000
+
 --48. Display products that are either Electronics OR Furniture.
+
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE Category = 'Electronics' OR Category = 'Furniture'
 
 --49. Display products supplied by either TechWorld OR OfficePro.
 
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE Supplier IN ('TechWorld','OfficePro')
+
 --50. Display products where the price is less than 500 OR greater than 5,000.
+
+SELECT *
+FROM ProductDB.dbo.Products
+WHERE Price < 500 OR Price > 5000
 
 --51. Update the price of the Wireless Mouse to 400.00.
 
