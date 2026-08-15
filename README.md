@@ -4,9 +4,9 @@
 
 This project demonstrates the design and implementation of a normalized relational database using SQL Server.
 
-The project started with a single denormalized `Products` table containing repeated descriptive values such as category, supplier, and status. The data was then restructured into a normalized model using reference tables, primary keys, foreign keys, and one-to-many relationships.
+The project started with a single denormalized `Products` table containing repeated descriptive values such as category, supplier, and status. The data was then restructured into a normalized model using reference tables, primary keys, foreign keys, and one to many relationships.
 
-The project also demonstrates a simple staging-to-target data flow.
+The project also demonstrates a simple staging to target data flow.
 
 ---
 
@@ -19,11 +19,11 @@ The main objectives of this project are to:
 * Use a staging table
 * Normalize a denormalized dataset
 * Create primary key and foreign key relationships
-* Model one-to-many relationships
+* Model one to many relationships
 * Load reference tables using `SELECT DISTINCT`
 * Load a normalized product table using `JOIN`s
 * Validate data between staging and normalized tables
-* Query normalized data in a human-readable format
+* Query normalized data in a human readable format
 * Practice SQL aggregation and analysis queries
 
 ---
@@ -132,7 +132,7 @@ StatusID        Foreign Key
 
 ## Relationships
 
-All relationships in the current model are one-to-many.
+All relationships in the current model are one to many.
 
 ```text
 Category      1 ─────< M Products
@@ -185,7 +185,7 @@ This improves:
 * Update management
 * Reduction of duplicated descriptive data
 
-The IDs are mainly used internally by the database. Human-readable values are returned using `JOIN`s.
+The IDs are mainly used internally by the database. Human readable values are returned using `JOIN`s.
 
 ---
 
