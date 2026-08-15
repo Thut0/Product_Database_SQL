@@ -28,6 +28,22 @@ INNER JOIN ProductDB.dbo.ProductStatus AS ps
 SELECT *
 FROM ProductDB.dbo.Products
 
+SELECT
+p.ProductID,
+p.ProductName,
+p.Price,
+p.StockQuantity,
+c.CategoryName,
+s.SupplierName,
+ps.StatusName
+FROM ProductDB.dbo.Products AS p
+JOIN ProductDB.dbo.Category AS c
+	ON p.CategoryID = c.CategoryID
+JOIN ProductDB.dbo.Supplier AS s
+	ON p.SupplierID = s.SupplierID
+JOIN ProductDB.dbo.ProductStatus AS ps
+	ON p.StatusID = ps.StatusID
+
 -- Compare the staging and normalized table count'
 
 SELECT COUNT(*) AS stg_count
